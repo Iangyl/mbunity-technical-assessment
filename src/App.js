@@ -1,7 +1,10 @@
-import PageWrapper from './components/PageWrapper';
+import Contact from './pages/Contact';
+import { PageWrapper } from './components';
 
 const App = () => (
-  <PageWrapper></PageWrapper>
-)
+  <PageWrapper>
+    <Contact />
+  </PageWrapper>
+);
 
-export default App
+export default App;

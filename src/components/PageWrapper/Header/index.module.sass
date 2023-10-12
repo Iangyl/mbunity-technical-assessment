@@ -1,20 +1,116 @@
 @import '../../../styles/mixins.sass'
+@import '../../../styles/functions.sass'
+
+.computer
+  --burger-dsp: none
+.tablet
+  --burger-dsp: inline-block
+.mobile
+  --burger-dsp: inline-block
+
+.opened
+  --nav-dsp: flex
+  --nav-direct: column
+  --links-col: var(--col-1)
+  --back-header-col: var(--col-2)
+  --back-nav-col: var(--col-2)
+  --border-btn-col: var(--col-2)
+  --header-pos: fixed
+  --header-height: 100vh
+.closed
+  --nav-dsp: none
+  --nav-direct: row
+  --links-col: var(--col-2)
+  --back-header-col: var(--col-1)
+  --back-nav-col: transparent
+  --border-btn-col: var(--col-1)
+  --header-pos: static
+  --header-height: auto
 
 .header 
   width: 100%
   background-color: var(--col-1)
   .navContainer 
     @include flex-yCenter-xBetween
-    .navbar 
-      display: flex
-      gap: 37px
-      margin: 0
-    .navbar li
-      @include flex-yCenter
-      height: 103px
-    .navbar li a
-      @include flex-yCenter
-      @include font-set-up(var(--header-font), 16px, 400, var(--col-2))
-      text-transform: capitalize
-    .navbar li a:hover
-      font-weight: 600
+    nav
+      @include mx-width(640px)
+      @include flex-yCenter-gap(60px)
+      .navbar
+        @include mx-width(523px)
+        @include flex-yCenter-gap(37px)
+        margin: 0
+        li
+          @include flex-yCenter
+          @include mx-width(64px)
+          a
+            @include font-set-up(var(--header-font), 1rem, 400, var(--col-2))
+            text-transform: capitalize
+            transition: font-weight 0.2s
+            &:hover
+              font-weight: 600
+              box-shadow: 0 0 0 1px transparent
+              cursor: var(--cursor-pointer-light), pointer
+      div
+        @include mx-width(calc(1340px - 1242px))
+        @include flex-yCenter-gap(36px)
+        .btn
+          @include flex-yCenter
+          background-color: transparent
+          border-radius: 50%
+          border-color: var(--col-2)
+          border-width: 1px
+          &:hover
+            cursor: var(--cursor-pointer-light), pointer
+          img
+            width: 16px
+    div
+      @include flex-yCenter-xBetween
+    .burgerBtn
+      display: var(--burger-dsp)
+      background-color: transparent
+      border: none
+      width: 42px
+      &:hover
+        cursor: var(--cursor-pointer-light), pointer
+
+@media screen and (min-width: 360px)
+  .header
+    padding-top: 19px
+    position: var(--header-pos)
+    height: var(--header-height)
+    background-color: var(--back-header-col)
+    .navContainer
+      flex-direction: var(--nav-direct)
+      gap: 50px
+      nav
+        background-color: var(--back-nav-col)
+        display: var(--nav-dsp)
+        flex-direction: var(--nav-direct)
+        .navbar
+          flex-direction: var(--nav-direct)
+          li
+            max-width: none
+            width: 100%
+            a
+              color: var(--links-col)
+        div
+          @include flex-yCenter-xCenter-gap(36px)
+          .btn
+            border-color: var(--border-btn-col)
+      div
+        width: 100%
+@media screen and (min-width: 768px)
+@media screen and (min-width: 1024px)
+  .header
+    background-color: var(--col-1)
+    .navContainer
+      gap: 0
+      nav
+        display: flex
+        gap: 30px
+        .navbar
+          gap: 20px
+          div
+            justify-content: start
+        div
+          gap: 14px

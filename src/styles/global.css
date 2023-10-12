@@ -24,6 +24,10 @@
   --cursor-pointer-light: url('../assets/icons/cursor-pointer-light.svg');
 }
 
+body {
+  background-color: var(--col-1);
+}
+
 .wrapper {
   width: 100%;
   margin: 0 auto;
@@ -32,17 +36,22 @@
 /* can be changed in the future */
 @media screen and (min-width: 360px) {
   .wrapper {
-    max-width: 360px;
+    max-width: 320px;
   }
 }
 @media screen and (min-width: 768px) {
   .wrapper {
-    max-width: 768px;
+    max-width: 668px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    max-width: 968px;
   }
 }
 @media screen and (min-width: 1440px) {
   .wrapper {
-    max-width: 1440px;
+    max-width: 1240px;
   }
 }
 

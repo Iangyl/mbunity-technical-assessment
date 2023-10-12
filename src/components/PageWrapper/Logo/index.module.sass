@@ -1,4 +1,6 @@
 @import '../../../styles/mixins.sass'
+@import '../../../styles/functions.sass'
+
 .opened
   --col: var(--col-1)
 .closed
@@ -10,6 +12,11 @@
     width: 48px
     height: 48px
   figcaption
-    @include font-set-up(var(--logo-font), 24px, 800, var(--col))
+    @include font-set-up(var(--logo-font), toRem(24), 800, var(--col))
   &:hover
-    cursor: pointer
+    cursor: var(--cursor-pointer-light), pointer
+
+@media screen and (min-width: 360px)
+  .logo
+    figcaption
+      font-size: toRem(18)

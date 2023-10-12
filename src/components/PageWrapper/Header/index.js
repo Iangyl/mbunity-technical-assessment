@@ -1,5 +1,8 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import useScreenSize from '../../../hooks/useScreenSize';
+
 import { links } from './index.config';
+
 import Logo from '../Logo';
 
 import {
@@ -14,18 +17,28 @@ import {
 import styles from './index.module.sass';
 
 const Header = () => {
+  const {width} = useScreenSize()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const whatDevice = useMemo(() => {
+    if (width >= 1024) return 'computer'
+    else if (width < 1024 && width > 425) return 'tablet'
+    else if (width <= 425) return 'mobile'
+    else return ''
+  }, [width])
+
+  const burgerMenuStatus = useMemo(() => isMenuOpen ? 'opened' : 'closed', [isMenuOpen])
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${styles[whatDevice]} ${styles[burgerMenuStatus]}`}>
       <div className={`wrapper ${styles.navContainer}`}>
         <div>
-          <Logo />
-          <button className={styles.burgerBtn}>
+          <Logo isOpened={isMenuOpen} />
+          <button className={styles.burgerBtn} onClick={toggleMenu}>
             <img src={isMenuOpen ? crossIcon : burgerIcon} alt=''/>
           </button>
         </div>
