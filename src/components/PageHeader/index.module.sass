@@ -1,0 +1,29 @@
+@import '../../styles/mixins.sass'
+@import '../../styles/functions.sass'
+
+.title
+  width: 100%
+  @include font-set-up(var(--primary-font), toRem(40), 700, var(--col-2))
+  text-align: center
+  text-transform: capitalize
+.subtitle
+  width: 100%
+  @include font-set-up(var(--primary-font), toRem(18), 500, var(--col-3))
+  text-align: center
+
+@media screen and (min-width: 360px)
+  .title
+    max-width: 184px
+    margin: 0 auto
+    font-size: toRem(24)
+  .subtitle
+    max-width: 184px
+    margin: 0 auto
+    font-size: toRem(14)
+@media screen and (min-width: 680px)
+  .title
+    max-width: none
+    font-size: toRem(40)
+  .subtitle
+    max-width: none
+    font-size: toRem(18)

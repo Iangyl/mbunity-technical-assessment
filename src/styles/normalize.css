@@ -107,6 +107,10 @@ img {
   margin-right: auto;
 }
 
+address {
+  font-style: normal;
+}
+
 figure {
   margin: 0;
 }

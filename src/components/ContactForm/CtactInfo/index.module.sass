@@ -1,0 +1,45 @@
+@import '../../../styles/mixins.sass'
+@import '../../../styles/functions.sass'
+
+.contactInfo
+  @include mx-width(491px)
+  padding: 40px 0 36px 39px
+  background-color: var(--col-2)
+  border-radius: 10px
+  .title
+    @include font-set-up(var(--primary-font), toRem(28), 600, var(--col-8))
+    text-transform: capitalize
+    margin-bottom: 6px
+  .subtitle
+    @include font-set-up(var(--primary-font), toRem(18), 400, var(--col-9))
+    margin: 0
+  .infoContainer
+    width: 100%
+    margin-top: 111px
+    margin-bottom: 159px
+    li
+      @include mx-width(288px)
+      @include flex-yCenter-gap(25px)
+      img
+        margin: 0
+      span
+        @include font-set-up(var(--primary-font), toRem(16), 400, var(--col-8))
+      &:not(:last-of-type)
+        margin-bottom: 50px
+  .socialLinks
+    @include flex-yCenter-gap(24px)
+    a
+      &:hover
+        cursor: var(--cursor-pointer-dark), pointer
+  .circleSmall
+    position: absolute
+    width: 138px
+    height: 138px
+    margin-top: -150px
+    margin-left: 260px
+  .circleBig
+    position: absolute
+    width: 157px
+    height: 157px
+    margin-top: -122px
+    margin-left: 294px

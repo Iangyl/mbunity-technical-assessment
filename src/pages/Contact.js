@@ -1,5 +1,11 @@
-const Contact = () => (
-  <></>
-)
+import { PageHeader } from '../components';
+import { ContactForm } from '../components';
 
-export default Contact
+const Contact = () => (
+  <>
+    <PageHeader />
+    <ContactForm />
+  </>
+);
+
+export default Contact;

@@ -12,7 +12,7 @@ import {
   cartLightIcon,
   burgerIcon,
   crossIcon
-} from '../../../assets/icons';
+} from '../../../assets';
 
 import styles from './index.module.sass';
 

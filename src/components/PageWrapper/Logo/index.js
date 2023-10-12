@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { logoDarkIcon, logoLightIcon } from '../../../assets/icons';
+import { logoDarkIcon, logoLightIcon } from '../../../assets';
 
 import styles from './index.module.sass';
 
