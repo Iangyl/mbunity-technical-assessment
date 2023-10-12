@@ -1,0 +1,15 @@
+@import '../../../styles/mixins.sass'
+.opened
+  --col: var(--col-1)
+.closed
+  --col: var(--col-2)
+  
+.logo
+  @include flex-yCenter-gap(7px)
+  img
+    width: 48px
+    height: 48px
+  figcaption
+    @include font-set-up(var(--logo-font), 24px, 800, var(--col))
+  &:hover
+    cursor: pointer

@@ -1,0 +1,20 @@
+@import '../../../styles/mixins.sass'
+
+.header 
+  width: 100%
+  background-color: var(--col-1)
+  .navContainer 
+    @include flex-yCenter-xBetween
+    .navbar 
+      display: flex
+      gap: 37px
+      margin: 0
+    .navbar li
+      @include flex-yCenter
+      height: 103px
+    .navbar li a
+      @include flex-yCenter
+      @include font-set-up(var(--header-font), 16px, 400, var(--col-2))
+      text-transform: capitalize
+    .navbar li a:hover
+      font-weight: 600

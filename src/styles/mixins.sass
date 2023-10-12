@@ -1,0 +1,24 @@
+@mixin flex-yCenter-xCenter()
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin flex-yCenter-xBetween()
+  display: flex
+  align-items: center
+  justify-content: space-between
+
+@mixin flex-yCenter()
+  display: flex
+  align-items: center
+
+@mixin flex-yCenter-gap($gap)
+  display: flex
+  align-items: center
+  gap: $gap
+
+@mixin font-set-up($family, $size, $weight, $col)
+  font-family: $family
+  font-size: $size
+  font-weight: $weight
+  color: $col
