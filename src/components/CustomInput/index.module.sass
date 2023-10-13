@@ -1,0 +1,22 @@
+@import '../../styles/mixins.sass'
+@import '../../styles/functions.sass'
+
+.container
+  width: 100%
+  .label
+    @include font-set-up(var(--primary-font), toRem(12), 500, var(--col-8))
+    display: block
+    width: 100%
+  .input
+    @include font-set-up(var(--primary-font), toRem(14), 500, var(--col-2))
+    display: block
+    width: 100%
+    border: none
+    border-bottom: 1px solid var(--col-8)
+    padding: 11.5px 5px
+    &:not(:focus)
+      color: var(--col-8)
+    &:focus
+      outline: none
+    &:placeholder
+      font-size: toRem(14)

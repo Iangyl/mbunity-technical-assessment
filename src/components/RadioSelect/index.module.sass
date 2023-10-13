@@ -1,0 +1,21 @@
+@import '../../styles/mixins.sass'
+@import '../../styles/functions.sass'
+
+.radioContainer
+  width: 100%
+  @include flex-yCenter-gap(20px)
+  .label
+    @include flex-yCenter-gap(10px)
+    .radio
+      visibility: hidden
+      position: absolute
+      left: -1000px
+    img
+      visibility: hidden
+    .visible
+      visibility: visible
+    .pseudo
+      width: 13px
+      height: 13.24px
+      border-radius: 50%
+      background-color: var(--col-7)

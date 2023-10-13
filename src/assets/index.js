@@ -9,6 +9,7 @@ export {default as logoDarkIcon} from './icons/logo-dark.svg';
 export {default as userDarkIcon} from './icons/user-dark.svg';
 export {default as TwitterIcon} from './icons/TwitterIcon.js';
 export {default as DiscordIcon} from './icons/DiscordIcon.js';
+export {default as checkmarkIcon} from './icons/checkmark.svg';
 export {default as cartLightIcon} from './icons/cart-light.svg';
 export {default as logoLightIcon} from './icons/logo-light.svg';
 export {default as userLightIcon} from './icons/user-light.svg';
