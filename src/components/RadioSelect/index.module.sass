@@ -6,6 +6,8 @@
   @include flex-yCenter-gap(20px)
   .label
     @include flex-yCenter-gap(10px)
+    @include font-set-up(var(--primary-font), toRem(12), 400, var(--col-2))
+    line-height: 20px
     .radio
       visibility: hidden
       position: absolute
@@ -19,3 +21,15 @@
       height: 13.24px
       border-radius: 50%
       background-color: var(--col-7)
+
+@media screen and (min-width: 360px)
+  .radioContainer
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+@media screen and (min-width: 768px)
+  .radioContainer
+    display: flex
+    flex-wrap: wrap
+    width: 100%
+

@@ -43,3 +43,98 @@
     height: 157px
     margin-top: -122px
     margin-left: 294px
+
+@media screen and (min-width: 360px)
+  .contactInfo
+    padding-right: 39px
+    padding-bottom: 25px
+    .title, .subtitle
+      text-align: center
+    .title
+      font-size: toRem(20)
+    .subtitle
+      font-size: toRem(11)
+    .infoContainer
+      margin-top: 12px
+      margin-bottom: 58px
+      li
+        @include flex-yCenter-xCenter
+        flex-direction: column
+        text-align: center
+        &:not(:last-of-type)
+          margin-bottom: 15px
+    .socialLinks
+      @include flex-yCenter-xCenter
+    .circleSmall
+      position: absolute
+      width: 54px
+      height: 54px
+      margin-top: -70px
+      margin-left: 167px
+    .circleBig
+      position: absolute
+      width: 72px
+      height: 72px
+      margin-top: -47px
+      margin-left: 178px
+@media screen and (min-width: 768px)
+  .contactInfo
+    padding: 40px 0 36px 39px
+    .title, .subtitle
+      text-align: left
+    .title
+      font-size: toRem(28)
+    .subtitle
+      font-size: toRem(18)
+    .infoContainer
+      margin-top: 111px
+      margin-bottom: 159px
+      li
+        @include flex-yCenter-gap(15px)
+        justify-content: start
+        text-align: left
+        flex-direction: row
+        &:not(:last-of-type)
+          margin-bottom: 50px
+    .socialLinks
+      @include flex-yCenter-gap(24px)
+      justify-content: start
+    .circleSmall
+      width: 61.3px
+      height: 61.3px
+      margin-top: -55px
+      margin-left: 200px
+    .circleBig
+      width: 69.7px
+      height: 69.7px
+      margin-top: -35px
+      margin-left: 217px
+@media screen and (min-width: 1024px)
+  .contactInfo
+    .infoContainer
+      li
+        gap: 25px
+    .circleSmall
+      width: 92px
+      height: 92px
+      margin-top: -90px
+      margin-left: 200px
+    .circleBig
+      width: 104.6px
+      height: 104.6px
+      margin-top: -69px
+      margin-left: 230px
+@media screen and (min-width: 1440px)
+  .contactInfo
+    .circleSmall
+      position: absolute
+      width: 138px
+      height: 138px
+      margin-top: -150px
+      margin-left: 260px
+    .circleBig
+      position: absolute
+      width: 157px
+      height: 157px
+      margin-top: -122px
+      margin-left: 294px
