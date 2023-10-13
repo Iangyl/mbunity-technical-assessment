@@ -1,0 +1,22 @@
+@import '../../../../styles/mixins.sass'
+@import '../../../../styles/functions.sass'
+
+.infoColumn
+  .title
+    @include font-set-up(var(--primary-font), toRem(18), 600, var(--col-9))
+    margin-bottom: 20px
+  .itemsList
+    .infoItem
+      @include flex-yCenter-gap(25px)
+      @include font-set-up(var(--primary-font), toRem(16), 400, var(--col-9))
+      &:not(:last-of-type)
+        margin-bottom: 24px
+      &:not(a)
+        cursor: default
+      img
+        margin: 0
+      a
+        &:hover
+          color: var(--col-9)
+          cursor: var(--cursor-pointer-dark), pointer
+          opacity: 0.5

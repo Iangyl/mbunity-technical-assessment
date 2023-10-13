@@ -7,7 +7,7 @@ const CtactInfo = () => (
   <address className={styles.contactInfo}>
     <h2 className={styles.title}>contact information</h2>
     <p className={styles.subtitle}>Say something to start a live chat!</p>
-    <ul className={`list-type-reset ${styles.infoContainer}`}>
+    <ul className={styles.infoContainer}>
       {contactList.map((item, idx) => (
         <li key={idx}>
           <img src={item.icon} alt="" />

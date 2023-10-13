@@ -1,0 +1,24 @@
+@import '../../../styles/mixins.sass'
+@import '../../../styles/functions.sass'
+  
+.footer
+  margin-top: 50px
+  background-color: var(--col-2)
+  padding: 80px 0 66px 0
+  .logoContainer
+    @include flex-xCenter
+    figure
+      img
+        margin: 0
+  div
+    @include mx-width(1280.5px)
+    margin: 0 auto
+  .lineContainer
+    margin: 45px auto 19px auto
+    .line
+      background-color: var(--col-9)
+  .linksContainer
+    @include flex-xBetween
+    padding-left: 20px
+      
+      

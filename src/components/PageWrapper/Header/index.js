@@ -44,7 +44,7 @@ const Header = () => {
         </div>
         <nav>
           <ul
-            className={`list-type-reset ${styles.navbar} ${
+            className={`${styles.navbar} ${
               isMenuOpen ? styles.openMenu : ''
             }`}
           >
