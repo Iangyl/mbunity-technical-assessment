@@ -1,7 +1,5 @@
 # Mbunity Test Assessment
 
-Comments will be added in last day. But access I gave earlier.
-
 ## Comments
 
 ### File structure
