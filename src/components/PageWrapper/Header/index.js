@@ -6,13 +6,12 @@ import { links } from './index.config';
 import Logo from '../Logo';
 
 import {
-  burgerIcon,
-  crossIcon,
   UserIcon,
   CartIcon
 } from '../../../assets';
 
 import styles from './index.module.sass';
+import BurgerButton from '../BurgerButton';
 
 const Header = () => {
   const {width} = useScreenSize()
@@ -36,9 +35,7 @@ const Header = () => {
       <div className={`wrapper ${styles.navContainer}`}>
         <div>
           <Logo isOpened={isMenuOpen} />
-          <button className={styles.burgerBtn} onClick={toggleMenu}>
-            <img src={isMenuOpen ? crossIcon : burgerIcon} alt=''/>
-          </button>
+          <BurgerButton checked={isMenuOpen} onClick={toggleMenu} />
         </div>
         <nav>
           <ul

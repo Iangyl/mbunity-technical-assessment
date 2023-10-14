@@ -1,10 +1,8 @@
-export {default as crossIcon} from './icons/cross.svg';
 export {default as emailIcon} from './icons/email.svg';
 export {default as phoneIcon} from './icons/phone.svg';
 export {default as UserIcon} from './icons/UserIcon.js';
 export {default as CartIcon} from './icons/CartIcon.js';
 export {default as LogoIcon} from './icons/LogoIcon.js';
-export {default as burgerIcon} from './icons/burger.svg';
 export {default as markerIcon} from './icons/marker.svg';
 export {default as circleIcon} from './icons/circle.svg';
 export {default as TwitterIcon} from './icons/TwitterIcon.js';
