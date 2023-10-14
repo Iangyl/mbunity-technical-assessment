@@ -1,16 +1,13 @@
 @import '../../../styles/mixins.sass'
 @import '../../../styles/functions.sass'
 
-.opened
+.light
   --col: var(--col-1)
-.closed
+.dark
   --col: var(--col-2)
   
 .logo
   @include flex-yCenter-gap(7px)
-  img
-    width: 48px
-    height: 48px
   figcaption
     @include font-set-up(var(--logo-font), toRem(24), 800, var(--col))
   &:hover
@@ -20,3 +17,7 @@
   .logo
     figcaption
       font-size: toRem(18)
+@media screen and (min-width: 1024px)
+  .logo
+    figcaption
+      font-size: toRem(24)
