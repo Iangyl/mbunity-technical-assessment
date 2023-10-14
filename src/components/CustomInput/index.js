@@ -11,7 +11,7 @@ const CustomInput = ({
 }) => {
   return (
     <div className={`${styles.container} ${className ?? ''}`}>
-      <label className={styles.label}>{label}</label>
+      <label className={styles.label} style={{color: value.length > 0 && '#000'} }>{label}</label>
       <input
         name={name}
         type={type}

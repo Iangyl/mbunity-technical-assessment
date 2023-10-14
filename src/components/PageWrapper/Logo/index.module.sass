@@ -3,15 +3,17 @@
 
 .light
   --col: var(--col-1)
+  --cursor: var(--cursor-pointer-dark), pointer
 .dark
   --col: var(--col-2)
+  --cursor: var(--cursor-pointer-light), pointer
   
 .logo
   @include flex-yCenter-gap(7px)
   figcaption
     @include font-set-up(var(--logo-font), toRem(24), 800, var(--col))
   &:hover
-    cursor: var(--cursor-pointer-light), pointer
+    cursor: var(--cursor)
 
 @media screen and (min-width: 360px)
   .logo
