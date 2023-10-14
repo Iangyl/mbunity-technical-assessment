@@ -1,18 +1,17 @@
 import { useMemo } from 'react';
-import { logoDarkIcon, logoLightIcon } from '../../../assets';
+import { LogoIcon } from '../../../assets';
 
 import styles from './index.module.sass';
 
 const Logo = ({ isOpened }) => {
-  /* can be changed in future */
-  const [logoIcon, status] = useMemo(() => {
-    if (isOpened) return [logoLightIcon, 'opened'];
-    else return [logoDarkIcon, 'closed'];
+  const mode = useMemo(() => {
+    if (isOpened) return 'light';
+    else return 'dark';
   }, [isOpened]);
 
   return (
-    <figure className={`${styles.logo} ${styles[status]}`}>
-      <img src={logoIcon} alt="" />
+    <figure className={`${styles.logo} ${styles[mode]}`}>
+      <LogoIcon width={48} height={50} mode={mode} />
       <figcaption>Mbuntity Technologies</figcaption>
     </figure>
   );
