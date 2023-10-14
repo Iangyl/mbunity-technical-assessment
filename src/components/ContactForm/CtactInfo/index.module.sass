@@ -99,6 +99,13 @@
     .socialLinks
       @include flex-yCenter-gap(24px)
       justify-content: start
+      a 
+        svg
+          &:hover
+            circle
+              fill: var(--col-9)
+            path
+              fill: var(--col-5)
     .circleSmall
       width: 61.3px
       height: 61.3px
