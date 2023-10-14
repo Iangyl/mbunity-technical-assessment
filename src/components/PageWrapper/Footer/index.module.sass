@@ -18,7 +18,81 @@
     .line
       background-color: var(--col-9)
   .linksContainer
-    @include flex-xBetween
+    display: grid
+    grid-template-columns: 282px 1fr 1fr 1fr 304px
     padding-left: 20px
+
+@media screen and (min-width: 360px)
+  .footer
+    div
+      max-width: 320px
+    .linksContainer
+      grid-template-columns: 143px 143px
+      grid-template-rows: auto auto auto
+      gap: 10px
+      div
+        &:nth-of-type(1)
+          grid-column: 1
+          grid-row: 1
+        &:nth-of-type(2)
+          grid-column: 2
+          grid-row: 1
+        &:nth-of-type(3)
+          grid-column: 1
+          grid-row: 2
+        &:nth-of-type(4)
+          grid-column: 2
+          grid-row: 2
+        &:nth-of-type(5)
+          grid-column: span 2
+          grid-row: 3
+@media screen and (min-width: 768px)
+  .footer
+    div
+      max-width: 720px
+    .linksContainer
+      grid-template-columns: 1fr 1fr 1fr
+      grid-template-rows: auto auto
+      div
+        &:nth-of-type(1)
+          grid-column: 1 / 2
+        &:nth-of-type(2)
+          grid-column: 2 / 3
+        &:nth-of-type(3)
+          grid-row: 2 / 2
+        &:nth-of-type(4)
+          grid-row: 2 / 2
+        &:nth-of-type(5)
+          grid-row: auto
+          grid-column: auto
+          
+@media screen and (min-width: 1024px)
+  .footer
+    div
+      max-width: 950px
+@media screen and (min-width: 1440px)
+  .footer
+    div
+      max-width: 1280.5px
+    .linksContainer
+      grid-template-columns: 282px 1fr 1fr 1fr 304px
+      grid-template-rows: 1fr
+      div
+        &:nth-of-type(1)
+          grid-column: 1
+          grid-row: 1
+        &:nth-of-type(2)
+          grid-column: 2
+          grid-row: 1
+        &:nth-of-type(3)
+          grid-column: 3
+          grid-row: 1
+        &:nth-of-type(4)
+          grid-column: 4
+          grid-row: 1
+        &:nth-of-type(5)
+          grid-column: 5
+          grid-row: 1
+
       
       

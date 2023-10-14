@@ -2,6 +2,7 @@
 @import '../../../../styles/functions.sass'
 
 .infoColumn
+  @include mx-width(282px)
   .title
     @include font-set-up(var(--primary-font), toRem(18), 600, var(--col-9))
     margin-bottom: 20px
@@ -20,3 +21,31 @@
           color: var(--col-9)
           cursor: var(--cursor-pointer-dark), pointer
           opacity: 0.5
+
+@media screen and (min-width: 360px)
+  .infoColumn
+    &:first-of-type
+      .itemsList
+        .infoItem
+          flex-direction: column
+          gap: 11.5px
+          img, span
+            margin-right: auto
+@media screen and (min-width: 768px)
+  .infoColumn
+    &:first-of-type
+      .itemsList
+        .infoItem
+          flex-direction: column
+          gap: 11.5px
+          img
+            margin-right: auto
+@media screen and (min-width: 1024px)
+  .infoColumn
+    &:first-of-type
+      .itemsList
+        .infoItem
+          flex-direction: row
+          gap: 10px
+          img
+            margin-right: 0
