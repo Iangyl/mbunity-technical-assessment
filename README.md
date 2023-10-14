@@ -1,5 +1,7 @@
 # Mbunity Test Assessment
 
+Comments will be added in last day. But access I gave earlier.
+
 ## Available Scripts
 
 In the project directory, you can run:
