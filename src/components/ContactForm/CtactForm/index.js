@@ -1,9 +1,10 @@
 import { useState, useCallback } from 'react';
+
 import Button from '../../Button';
 import RadioBlock from './RadioBlock';
 import CustomInput from '../../CustomInput';
 
-import {paperPlaneFigure} from '../../../assets'
+import { paperPlaneFigure } from '../../../assets';
 
 import styles from './index.module.sass';
 
@@ -16,13 +17,16 @@ const CtactForm = () => {
     message: '',
   });
 
-  const handleChangeInput = useCallback((event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    const newForm = { ...form };
-    newForm[name] = value;
-    setForm(newForm);
-  }, [form]);
+  const handleChangeInput = useCallback(
+    (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      const newForm = { ...form };
+      newForm[name] = value;
+      setForm(newForm);
+    },
+    [form]
+  );
 
   return (
     <form className={styles.contactForm}>
@@ -61,10 +65,10 @@ const CtactForm = () => {
         type="text"
         value={form.message}
         onChange={handleChangeInput}
-        placeholder='Write your message..'
+        placeholder="Write your message.."
       />
-      <Button type="submit" label='send message' />
-      <img className={styles.paperPlane} src={paperPlaneFigure} alt=''/>
+      <Button type="submit" label="send message" />
+      <img className={styles.paperPlane} src={paperPlaneFigure} alt="" />
     </form>
   );
 };

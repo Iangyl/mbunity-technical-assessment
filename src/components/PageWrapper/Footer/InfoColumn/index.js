@@ -1,7 +1,7 @@
 import styles from './index.module.sass';
 
-export const InfoItem = ({ children, key }) => (
-  <li key={key} className={styles.infoItem}>
+export const InfoItem = ({ children }) => (
+  <li className={styles.infoItem}>
     {children}
   </li>
 );
