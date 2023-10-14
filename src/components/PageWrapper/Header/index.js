@@ -6,12 +6,10 @@ import { links } from './index.config';
 import Logo from '../Logo';
 
 import {
-  userDarkIcon,
-  userLightIcon,
-  cartDarkIcon,
-  cartLightIcon,
   burgerIcon,
-  crossIcon
+  crossIcon,
+  UserIcon,
+  CartIcon
 } from '../../../assets';
 
 import styles from './index.module.sass';
@@ -58,10 +56,10 @@ const Header = () => {
           </ul>
           <div>
             <button type="button" className={styles.btn}>
-              <img src={isMenuOpen ? userLightIcon : userDarkIcon} alt="" />
+              <UserIcon width={16} height={16} mode={isMenuOpen ? 'light' : 'dark'} />
             </button>
             <button type="button" className={styles.btn}>
-              <img src={isMenuOpen ? cartLightIcon : cartDarkIcon} alt="" />
+              <CartIcon width={16} height={16} mode={isMenuOpen ? 'light' : 'dark'} />
             </button>
           </div>
         </nav>
